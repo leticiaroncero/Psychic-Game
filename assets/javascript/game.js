@@ -6,6 +6,9 @@ var userChoice;
 var userChoiceLocation = document.getElementById("userGuess")
 var remainingGuessLocation = document.getElementById("remainingGuess")
 var remainingGuess = 10;
+var winsLocation = document.getElementById("wins")
+var wins = 0;
+
 
 document.onkeyup = function (event) {
 
@@ -13,5 +16,12 @@ document.onkeyup = function (event) {
     userChoiceLocation.innerHTML = userChoice
     remainingGuess = remainingGuess - 1
     remainingGuessLocation.innerHTML = remainingGuess
+
+    if (userChoice == computerChoice) {
+        wins = wins + 1
+        winsLocation.innerHTML = wins
+        remainingGuess = 10
+        computerChoice = Math.floor(Math.random() * alphabet.length);
+    }
 
 }
