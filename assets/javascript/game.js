@@ -4,10 +4,13 @@ var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 var computerChoice = Math.floor(Math.random() * alphabet.length);
 var userChoice;
 var userChoiceLocation = document.getElementById("userGuess")
+var remainingGuessLocation = document.getElementById("remainingGuess")
+var remainingGuess = 10;
 
 document.onkeyup = function(event) {
     
     var userChoice = event.key
-    userChoiceLocation.textContent = userChoice
+    userChoiceLocation.innerHTML = userChoice
+    remainingGuessLocation.innerHTML = remainingGuess - 1;
 
 }
