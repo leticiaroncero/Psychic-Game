@@ -9,7 +9,7 @@ var remainingGuess = 10;
 
 document.onkeyup = function (event) {
 
-    var userChoice = event.key
+    var userChoice = event.key.toLowerCase()
     userChoiceLocation.innerHTML = userChoice
     remainingGuess = remainingGuess - 1
     remainingGuessLocation.innerHTML = remainingGuess
