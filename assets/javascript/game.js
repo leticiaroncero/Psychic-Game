@@ -1,7 +1,8 @@
 
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
     "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var computerChoice = Math.floor(Math.random() * alphabet.length);
+var randomPosition = Math.floor(Math.random() * alphabet.length);
+var computerChoice = alphabet[randomPosition]
 var userChoice;
 var userChoiceLocation = document.getElementById("userGuess")
 var remainingGuessLocation = document.getElementById("remainingGuess")
@@ -23,12 +24,16 @@ document.onkeyup = function (event) {
         wins = wins + 1
         winsLocation.innerHTML = wins
         remainingGuess = 10
-        computerChoice = Math.floor(Math.random() * alphabet.length);
+        remainingGuessLocation.innerHTML = remainingGuess
+        randomPosition = Math.floor(Math.random() * alphabet.length);
+        computerChoice = alphabet[randomPosition]
     } else if (remainingGuess == 0) {
         losses = losses + 1
         lossesLocation.innerHTML = losses
         remainingGuess = 10
-        computerChoice = Math.floor(Math.random() * alphabet.length);
+        remainingGuessLocation.innerHTML = remainingGuess
+        randomPosition = Math.floor(Math.random() * alphabet.length);
+        computerChoice = alphabet[randomPosition]
     }
 
 }
