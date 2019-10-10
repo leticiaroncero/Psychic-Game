@@ -8,6 +8,8 @@ var remainingGuessLocation = document.getElementById("remainingGuess")
 var remainingGuess = 10;
 var winsLocation = document.getElementById("wins")
 var wins = 0;
+var losses = 0;
+var lossesLocation = document.getElementById("losses");
 
 
 document.onkeyup = function (event) {
@@ -20,6 +22,11 @@ document.onkeyup = function (event) {
     if (userChoice == computerChoice) {
         wins = wins + 1
         winsLocation.innerHTML = wins
+        remainingGuess = 10
+        computerChoice = Math.floor(Math.random() * alphabet.length);
+    } else if (remainingGuess == 0) {
+        losses = losses + 1
+        lossesLocation.innerHTML = losses
         remainingGuess = 10
         computerChoice = Math.floor(Math.random() * alphabet.length);
     }
