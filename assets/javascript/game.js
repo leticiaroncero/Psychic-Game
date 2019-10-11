@@ -26,6 +26,7 @@ document.onkeyup = function (event) {
         winsLocation.innerHTML = wins
         remainingGuess = 10
         remainingGuessLocation.innerHTML = remainingGuess
+        userChoiceLocation.innerHTML = ""
         randomPosition = Math.floor(Math.random() * alphabet.length);
         computerChoice = alphabet[randomPosition]
     } else if (remainingGuess == 0) {
@@ -33,6 +34,7 @@ document.onkeyup = function (event) {
         lossesLocation.innerHTML = losses
         remainingGuess = 10
         remainingGuessLocation.innerHTML = remainingGuess
+        userChoiceLocation.innerHTML = ""
         randomPosition = Math.floor(Math.random() * alphabet.length);
         computerChoice = alphabet[randomPosition]
     }
