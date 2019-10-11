@@ -14,10 +14,14 @@ var lossesLocation = document.getElementById("losses");
 document.onkeyup = function (event) {
 
     var userChoice = event.key.toLowerCase()
+
+    if (alphabet.indexOf(userChoice) == -1) {
+        return;        
+    }
+  
     var addChoice = document.createElement("span")
     addChoice.innerHTML = userChoice
     userChoiceLocation.appendChild(addChoice)
-
     remainingGuess = remainingGuess - 1
     remainingGuessLocation.innerHTML = remainingGuess
 
