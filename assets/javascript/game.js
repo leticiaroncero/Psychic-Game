@@ -11,11 +11,11 @@ var losses = 0;
 var lossesLocation = document.getElementById("losses");
 
 var reset = function () {
-    remainingGuess = 10
-    remainingGuessLocation.innerHTML = remainingGuess
-    userChoiceLocation.innerHTML = ""
+    remainingGuess = 10;
+    remainingGuessLocation.innerHTML = remainingGuess;
+    userChoiceLocation.innerHTML = "";
     randomPosition = Math.floor(Math.random() * alphabet.length);
-    computerChoice = alphabet[randomPosition]
+    computerChoice = alphabet[randomPosition];
 }
 
 document.onkeyup = function (event) {
@@ -27,7 +27,7 @@ document.onkeyup = function (event) {
 
     var addChoice = document.createElement("button");
     addChoice.innerHTML = userChoice;
-    addChoice.disabled = true
+    addChoice.disabled = true;
     userChoiceLocation.appendChild(addChoice);
     remainingGuess = remainingGuess - 1;
     remainingGuessLocation.innerHTML = remainingGuess;
