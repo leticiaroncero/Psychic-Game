@@ -1,0 +1,9 @@
+.jumbotron {
+    background-image: url();
+    background-size: cover;
+}
+
+.guess-area {
+    width: 940px;
+    margin: auto;
+}

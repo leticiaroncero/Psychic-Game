@@ -8,20 +8,37 @@
     <title>Psychic Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">The Psychic Game</h1>
-            <p class="lead">Guess what letter I'm thinking of.</p>
+            <h1 class="display-4 text-center">The Psychic Game</h1>
+            <p class="lead text-center">Guess what letter I'm thinking of.</p>
         </div>
     </div>
     <div class="guess-area">
-        <p>Wins: <span id="wins">0</span></p>
-        <p>Losses: <span id="losses">0</span></p>
-        <p>Guesses Left: <span id="remainingGuess">10</span></p>
-        <p>Your Guesses So Far: <span id="userGuess"></span></p>
+        <div class="card mt-1 bg-success">
+            <div class="card-body text-center">
+                <h3>Wins: <span id="wins">0</span></h3>
+            </div>
+        </div>
+        <div class="card mt-1 bg-danger">
+            <div class="card-body text-center">
+                <h3>Losses: <span id="losses">0</span></h3>
+            </div>
+        </div>
+        <div class="card mt-1">
+            <div class="card-body text-center bg-warning">
+                <h3>Guesses Left: <span id="remainingGuess">10</span></h3>
+            </div>
+        </div>
+        <div class="card mt-1">
+            <div class="card-body text-center bg-info">
+                <h3>Your Guesses So Far: <span id="userGuess"></span></h3>
+            </div>
+        </div>
     </div>
     <script src="assets/javascript/game.js"></script>
 </body>
