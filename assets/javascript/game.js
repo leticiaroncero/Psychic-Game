@@ -10,14 +10,21 @@ var wins = 0;
 var losses = 0;
 var lossesLocation = document.getElementById("losses");
 
-document.onkeyup = function (event) {
+var reset = function () {
+    remainingGuess = 10
+    remainingGuessLocation.innerHTML = remainingGuess
+    userChoiceLocation.innerHTML = ""
+    randomPosition = Math.floor(Math.random() * alphabet.length);
+    computerChoice = alphabet[randomPosition]
+}
 
+document.onkeyup = function (event) {
     var userChoice = event.key.toUpperCase();
 
     if (alphabet.indexOf(userChoice) == -1) {
-        return;        
+        return;
     }
-  
+
     var addChoice = document.createElement("button");
     addChoice.innerHTML = userChoice;
     userChoiceLocation.appendChild(addChoice);
@@ -25,21 +32,15 @@ document.onkeyup = function (event) {
     remainingGuessLocation.innerHTML = remainingGuess;
 
     if (userChoice == computerChoice) {
-        wins = wins + 1
-        winsLocation.innerHTML = wins
-        remainingGuess = 10
-        remainingGuessLocation.innerHTML = remainingGuess
-        userChoiceLocation.innerHTML = ""
-        randomPosition = Math.floor(Math.random() * alphabet.length);
-        computerChoice = alphabet[randomPosition]
+        wins = wins + 1;
+        winsLocation.innerHTML = wins;
+        reset();
+
     } else if (remainingGuess == 0) {
-        losses = losses + 1
-        lossesLocation.innerHTML = losses
-        remainingGuess = 10
-        remainingGuessLocation.innerHTML = remainingGuess
-        userChoiceLocation.innerHTML = ""
-        randomPosition = Math.floor(Math.random() * alphabet.length);
-        computerChoice = alphabet[randomPosition]
+        losses = losses + 1;
+        lossesLocation.innerHTML = losses;
+        reset();
     }
 
 }
+
