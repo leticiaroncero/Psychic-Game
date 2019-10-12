@@ -27,6 +27,7 @@ document.onkeyup = function (event) {
 
     var addChoice = document.createElement("button");
     addChoice.innerHTML = userChoice;
+    addChoice.disabled = true
     userChoiceLocation.appendChild(addChoice);
     remainingGuess = remainingGuess - 1;
     remainingGuessLocation.innerHTML = remainingGuess;
