@@ -1,5 +1,7 @@
 # Psychic-Game
 
+[Link to deployed site](https://leticiaroncero.github.io/Psychic-Game/)
+
 ## Description
 In this guessing game, the computer randomly picks a letter, and the user has to guess which letter the computer chose by pressing a letter key on the keyboard. The user gets 10 guesses per round. The goal of this project was to use JavaScript code to create dynamic HTML content.
 
